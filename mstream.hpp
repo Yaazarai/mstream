@@ -47,9 +47,10 @@
             align_of = 0;
         }
 
-        void alloc(size_t size_x = size, size_t align_x = align) {
-            size_of = size;
-            align_of = align;
+        template<size_t new_size = size, size_t new_align = align>
+        void alloc() {
+            size_of = new_size;
+            align_of = new_align;
             fast_al = align - 1;
             fast_nt = ~(align - 1);
             memory = new byte[size_of];
