@@ -43,3 +43,18 @@ class mstream {
     void poke(T value, size_t seek);
 };
 ```
+`mstream` uses an unorthodox methodology of creation & allocation of memory via templates. Creating a new instance of `mstream` will take two input arguments `<size, alignment>` instead of taking the arguments through the constructor. `alloc()` does the same thing, except that `alloc()` has "optional template arguments," that will by default pull the class' template inputs if the arguments are not specified.
+
+```C++
+/*
+    Example
+*/
+// Constructs a new stream with a length of `16` and a byte alingment of `1`.
+mstream<16, 1> my_stream;
+
+// This will alocate new memory using the class' input args: <16, 1>
+my_stream.alloc<>();
+
+// This will allocate new memory given user-defined input args.
+my_stream.alloc<32, 4>();
+```
