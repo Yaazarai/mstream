@@ -15,7 +15,7 @@
 
         public:
         mstream() {
-            memory = new byte[size]();
+            memory = new __int8[size]();
             size_of = size;
             align_of = align;
             fast_al = align - 1;
