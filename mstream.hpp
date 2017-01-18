@@ -6,7 +6,7 @@
     template<size_t size, size_t align>
     class mstream {
         private:
-        byte* memory = nullptr;
+        __int8* memory = nullptr;
         size_t seek_in = 0,
             size_of,
             align_of = 0,
@@ -29,7 +29,7 @@
 
         void inline fast_align(size_t& iter) { iter = (iter + fast_al) & fast_nt; };
         
-        operator byte*() { return memory; };
+        operator __int8*() { return memory; };
 
         bool memexists() { return memory != nullptr; }
 
