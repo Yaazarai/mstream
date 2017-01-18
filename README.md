@@ -31,10 +31,10 @@ class mstream {
     void alloc();
     // Reads a value type <T> from the mstream.
     template<typename T>
-    T read()
+    T read();
     // Reads a value type <T> from the mstream at the indictaed seek position (does not move the seek mstream's position).
     template<typename T>
-    T peek(size_t seek)
+    T peek(size_t seek);
     // Writes a value tpye <T> to the mstream.
     template<typename T>
     void write(T value);
