@@ -1,8 +1,5 @@
 #ifndef MSTREAM
 #define MSTREAM
-    #include "byte.hpp"
-    #include <string.h>
-
     template<size_t size, size_t align>
     class mstream {
         private:
