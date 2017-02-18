@@ -50,7 +50,7 @@
             align_of = new_align;
             fast_al = align - 1;
             fast_nt = ~(align - 1);
-            memory = new byte[size_of];
+            memory = new __int8[size_of];
         }
 
         template<typename T>
